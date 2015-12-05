@@ -1,20 +1,21 @@
----
-title: "Untitled"
-output: html_document
----
+## The Normal Distribution
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The normal distribution is defined as follows:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this: $\frac{\sqrt{x}}{y}$ $\mathbb{R}$
+$$
+f(x;\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }
+$$
 
-```{r}
-summary(cars)
+To generate random draws from a normal distribution we use the **rnorm** function:
+
+```{r block1}
+output <- rnorm(1000, 100, 15);
 ```
+
+The normal distribution has the typical bell shape:
+
 
 You can also embed plots, for example:
 
-```{r, echo=FALSE}
-plot(cars)
-```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
